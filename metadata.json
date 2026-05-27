@@ -1,0 +1,6 @@
+{
+  "name": "Aegis Core HUD",
+  "description": "An advanced futuristic heads-up display dashboard interface inspired by J.A.R.V.I.S., featuring real-time biometric scanning simulations, 3D holographic Earth telemetry, system monitors, dynamic interactive hand gesture maps, and a fully functional AI-powered voice/combat diagnostics terminal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

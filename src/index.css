@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display-lg: "Georgia", serif;
+  --font-headline-md: "Georgia", serif;
+  --font-label-caps: "Space Mono", monospace;
+  --font-data-primary: "JetBrains Mono", monospace;
+  --font-data-secondary: "JetBrains Mono", monospace;
+  --font-telemetry-tiny: "JetBrains Mono", monospace;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(22, 22, 22, 0.4);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.3);
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.6);
+}
+
+/* Sophisticated Dark premium panel styling */
+.glass-panel {
+  background: #161616;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.glass-panel:hover {
+  border-color: rgba(197, 160, 89, 0.25);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Glow system */
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.25);
+}
+
+/* Arc Reactor Power pulse animation custom styled for gold spectrum */
+.arc-pulse {
+  animation: arc-reactor-pulse 3.5s infinite ease-in-out;
+}
+@keyframes arc-reactor-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.35));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 45px rgba(197, 160, 89, 0.75));
+    transform: scale(1.02);
+  }
+}
+
+/* Gesture pulsing ring matching the Sophisticated Dark look */
+.gesture-pulse {
+  animation: gesturePulse 2.8s infinite;
+}
+@keyframes gesturePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(197, 160, 89, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+  }
+}
+
+/* Repeating Elegant Dots */
+.nanotech-bg {
+  background-image: radial-gradient(circle, #C5A059 0.4px, transparent 0.4px);
+  background-size: 24px 24px;
+}
+
+/* Matrix Background fading canvas */
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Scanline Sweeper */
+.scanline {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to bottom, rgba(197, 160, 89, 0), rgba(197, 160, 89, 0.15), rgba(197, 160, 89, 0));
+  position: absolute;
+  animation: scan-tracer 6s linear infinite;
+}
+@keyframes scan-tracer {
+  from { top: -10%; }
+  to { top: 110%; }
+}
